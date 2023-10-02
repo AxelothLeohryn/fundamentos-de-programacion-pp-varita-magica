@@ -8,7 +8,7 @@ for (let i = 0; i < links.length; i++) {
 //Imagenes: cambiar por gif random al clickear
 let images = document.getElementsByTagName('img');
 let gifs = ['./assets/magic-1.gif', './assets/magic-2.gif', './assets/magic-3.gif', './assets/magic-4.gif', './assets/magic-5.gif', './assets/magic-6.gif', ];
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min, max) {      //Funcion para obtener num random entre 0 -5
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -16,7 +16,7 @@ function getRandomIntInclusive(min, max) {
 for (let i = 0; i < images.length; i++) {
     let imgCurrentSrc = images[i].src;
     images[i].addEventListener('click', function() {
-        images[i].src = gifs[getRandomIntInclusive(0, 5)];
+        images[i].src = gifs[getRandomIntInclusive(0, 5)];    //On click cambiar por gif random
     });
     images[i].addEventListener('mouseenter', function() {     //On mouse enter cambiar por abracadabra.gif
         images[i].src = './assets/abracadabra.gif';
@@ -32,7 +32,7 @@ let parrafos = document.getElementsByTagName('p');
 for (let i = 0; i < parrafos.length; i++) {
     let pCurrentBColor = parrafos[i].style.backgroundColor;
     let pCurrentColor = parrafos[i].style.color;
-    parrafos[i].addEventListener('click', function() {
+    parrafos[i].addEventListener('click', function() {         //On click cambiar backgroundcolor y color
         parrafos[i].style.backgroundColor = 'black';
         parrafos[i].style.color = 'red';
     });
@@ -62,5 +62,5 @@ for (let i = 0; i < articlesAndSections.length; i++) {
     });
 }
 
-//imagenes: cambiar imagen al hacer hover, devolver imagen al salir del hover
+//Bonus Crea una función de nombre getRandom que acepte un array con valores y devuelva uno de ellos de manera aleatoria.
 
